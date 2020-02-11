@@ -19,7 +19,7 @@
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <!-- $event gives access to event data -->
+      <!-- $event gives access to event data, listen on intervalFired and execute onIntervalFired()-->
       <app-game-control (intervalFired)="onIntervalFired($event)">
       </app-game-control>
 
@@ -27,6 +27,7 @@
   </div>
   <div class="row">
     <div class="col-xs-12">
+      <!-- replicate the array, loop through thte array and bind to 'number' and pass the oddnumbers and evennumbers respectively -->
       <!-- $event gives access to event data -->
       <app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd>
       <app-even *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even>

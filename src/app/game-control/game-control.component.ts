@@ -20,9 +20,10 @@ export class GameControlComponent implements OnInit {
     console.log("setting interval");
 
     this.interval = setInterval(() => {
-      //emit an event
+      //emit an event function on each tick
+      //emit an incrementing number
       this.intervalFired.emit(this.lastNumber + 1);
-      this.lastNumber++;
+      this.lastNumber++; //this keeps track of the last emitted number was if the game was paused
     }, 1000);
 
   }

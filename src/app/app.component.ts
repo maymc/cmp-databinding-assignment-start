@@ -10,6 +10,7 @@ export class AppComponent {
   oddNumbers: number[] = [];
   evenNumbers: number[] = [];
 
+  //executed with the listener
   onIntervalFired(firedNumber: number) {
     if (firedNumber % 2 === 0) {
       this.evenNumbers.push(firedNumber);
@@ -17,10 +18,6 @@ export class AppComponent {
     else {
       this.oddNumbers.push(firedNumber);
     }
-  }
-
-  onGameStopped() {
-
   }
 
 }
